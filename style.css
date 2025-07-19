@@ -1,0 +1,366 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.landing-page{
+    height: 100vh; /* 'vw' is used for width not for height , instead use 'vh(view-height)'  */
+    width: 100%;  
+}
+
+/* pre-nav */
+.pre-nav{
+    background-color: #04052E;
+    color: white;
+    height:5%;
+    display: flex;
+    justify-content: space-between; /* space between instead of space evenly*/
+    align-items: center;
+}
+
+/* @media only screen and (max-width: 600px){
+    .pre-nav{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+    no need for this until a new container is required */ 
+
+.address-nav{
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:auto;
+    padding:5%;
+    margin:5%;
+}
+
+.top-right{
+    width:auto;
+    padding: 5%; 
+    margin:5%;/* paddding was hard coded to 300px*/
+    display: flex; /* added flex to gap the icons evenly*/
+    gap: 20px; 
+}
+    
+/* .top-right i{
+    margin-left: 20px;
+} */
+
+/* @media only screen and (max-width: 600px){
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+} */
+
+/* navbar*/
+.navbar{
+    background-color: white;
+    height:10%; /* height is hard-coded again, changed it to a relative one */
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 600px){
+    .navbar{
+        display: flex;
+        height:10%;
+        justify-content: center;
+        align-items: center;
+        padding:5%;
+    }
+}
+
+.nav-logo{
+    display: flex;
+    margin-left: 5%;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+
+
+.para1{
+    font-size: 2rem;
+    margin-left: 5px;
+}
+.para2{
+    margin-left: 5px;
+}
+
+.logo{
+    background-image: url("logo2.png");
+    background-size: cover;
+    height:50px;
+    width:50px;
+}
+
+.options{
+    display:flex;
+    position: inherit;
+    gap:20px;
+    padding:5%;
+    margin:2%;
+}
+
+/* hero section */
+
+.hero-section {
+    height: 85%; /*  height hard-coded again */
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.slideBar {
+  display: flex;
+  width: 400%; 
+  height: 100%;
+  animation: slideShow 20s infinite ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  background-size:cover ;
+  background-repeat: no-repeat;
+  opacity:8;
+}
+
+
+.slide1 {
+  background-image: url("image.jpg");
+}
+
+.slide2 {
+  background-image:  url("image2.jpg");
+}
+
+.slide3 {
+  background-image: url("image3.jpg");
+}
+
+.slide4 {
+  background-image: url("image4.jpg");
+}
+
+@keyframes slideShow {
+  0%   { transform: translateX(0%); }
+  20%  { transform: translateX(0%); }
+
+  25%  { transform: translateX(-100%); }
+  45%  { transform: translateX(-100%); }
+
+  50%  { transform: translateX(-200%); }
+  70%  { transform: translateX(-200%); }
+
+  75%  { transform: translateX(-300%); }
+  95%  { transform: translateX(-300%); }
+
+  100% { transform: translateX(0%); }
+}
+
+.in-btwn{
+    background-color: rgba(0,0,0,0.5);
+    position:absolute;
+    color: white;
+    height: 100%; /*height hard-coded again */
+    width:100%;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    font-weight: 800;
+    bottom:0px;
+    left:0px;
+    z-index:0;
+}
+
+/* @media only screen and (max-width: 600px){
+    .in-btwn{
+        display: flex;
+        flex-wrap: wrap;
+    }
+} */
+
+
+
+/** content **/
+.content{
+    height: 40%; /* used 'vh' instead of vw */
+    display: grid; /* using grid for better adjustment */
+    grid-template-columns: auto auto auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding:5%; 
+
+}
+
+@media only screen and (max-width: 600px){
+    .content
+    {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+.card1{
+    display: grid;
+    place-content: center;
+    text-align: center;
+    border: 5px #0f1111 ;
+    padding:5%;
+
+}
+
+.card1 i{
+    color:#3498db;
+    font-size: 3rem;
+    padding:2%;
+}
+
+.card-para{
+    padding:2%;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#898989;
+}
+
+.card-para1{
+    padding:2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+.card-para2{
+    padding:2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+} /* replaced margins with padding*/
+
+/** shop section**/
+
+.shop-section{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 20px;
+    justify-content: space-evenly;
+    background-color:#e2e7e6 ;
+}
+
+@media only screen and (max-width: 600px){
+    .shop-section{
+        display: grid;
+        grid-template-columns: auto ;
+        gap: 20px;
+    }
+}
+
+.box{
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 2%;
+    /* transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in; */
+    transition: all 0.2s ease-in;
+    border-radius: 15px;
+
+}
+
+.box:hover{
+    transform: scale(1.02);
+    box-shadow: 5px 5px 5px rgb(0 0 0/ 0.2);
+}
+
+.box-image{
+    height:300px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.box-content{
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
+.box-content p{
+    color: #007185;
+}
+
+/** footer**/
+
+
+.foot-panel1{
+    background-color: #37475a;
+    color: white;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+
+}
+
+.foot-panel2{
+    background-color: #04052E;
+    color:white;
+    padding: 5%;
+    height:auto;
+   display: grid;
+    gap:20px;
+   grid-template-columns: auto auto auto auto;
+}
+
+ul{
+    margin-top: 20px;
+}
+
+ul a{
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color:#dddddd;
+}
+
+.foot-panel3{
+    background-color: #222f3d;
+    border-top: 0.5px solid white;
+    height:70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-panel4{
+    background-color:#0f1111;
+    color:white;
+    height:80px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.pages{
+    padding-top: 25px;
+}
+
+.copyright{
+        padding-top: 5px;
+}
+
+@media only screen and (max-width: 600px){
+    .foot-panel2{
+        display: grid;
+        grid-template-columns: auto;
+        place-content: center;
+    }
+}
+
